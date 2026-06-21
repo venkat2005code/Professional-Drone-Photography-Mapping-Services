@@ -64,6 +64,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Main Header Navigation Hamburger Toggle
+    const mainHamburgerBtns = document.querySelectorAll('.mobile-menu-btn');
+    const mainNav = document.querySelector('header nav');
+    
+    if (mainNav) {
+        mainHamburgerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Ignore if it's the dashboard sidebar toggle
+                if (btn.id === 'mobile-menu-btn' && document.querySelector('.app-sidebar')) return;
+                
+                mainNav.classList.toggle('open');
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    if (mainNav.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+    }
+
     // Intersection Observer for Fade-Up Animations
     const fadeElements = document.querySelectorAll('.fade-up');
     if (fadeElements.length > 0) {

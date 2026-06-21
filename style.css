@@ -940,7 +940,7 @@ body.app-mode {
         margin-right: 0;
     }
 
-    .mobile-menu-btn {
+    .app-topbar .mobile-menu-btn {
         display: block;
     }
 
@@ -1365,4 +1365,156 @@ select {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1em;
+}
+
+/* --- 1024px Small Laptop / Landscape Tablet Optimizations --- */
+@media (max-width: 1024px) {
+    /* 1. Header Navigation Breathing Room */
+    header {
+        padding: 1.2rem 3%;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    
+    /* 2. Scale down massive desktop typography */
+    h1 {
+        font-size: 4rem !important;
+    }
+    h2 {
+        font-size: 3rem !important;
+    }
+    .hero-centered h1, .hero-split-left h1, .hero-split-right h1 {
+        font-size: 4rem !important;
+    }
+    
+    /* 3. Reduce global section padding */
+    .section-padding {
+        padding: 6rem 4% !important;
+    }
+    
+    /* 4. Grid gaps reduction */
+    .grid-2, .grid-3, .grid-4 {
+        gap: 1.5rem;
+    }
+}
+
+/* --- 768px Tablet Optimizations --- */
+@media (max-width: 768px) {
+    /* 1. Header Navigation Overlap (Hamburger Menu) */
+    header {
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    header .mobile-menu-btn {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-elevated);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-elevated);
+        padding: 1.5rem 5%;
+        flex-direction: column;
+        gap: 1.5rem;
+        z-index: 999;
+    }
+    nav.open {
+        display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+    .header-utils {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+    }
+    
+    /* 2. Scale down large typography slightly */
+    h1 {
+        font-size: 3.5rem !important;
+        line-height: 1.2 !important;
+    }
+    h2 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    .hero-centered h1, .hero-split-left h1, .hero-split-right h1 {
+        font-size: 3.5rem !important;
+    }
+    
+    /* 3. Dashboard table horizontal scroll */
+    .dashboard-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* --- 360px Mobile Optimizations --- */
+@media (max-width: 480px) {
+    /* 1. Prevent grid layout overflow */
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    /* 2. Scale down large typography */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    h2 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* 3. Reduce padding to save screen space */
+    .section-padding {
+        padding: 4rem 1rem !important;
+    }
+    
+    /* 4. Fix table horizontal overflow (Handled by 768px rule) */
+    
+    /* 5. Dashboard specific mobile fixes */
+    .app-main {
+        padding: 1rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 7. Ensure media elements fit */
+    .media-placeholder, iframe {
+        max-width: 100% !important;
+    }
+    
+    /* 8. Fix zig-zag row margins */
+    .zig-zag-row > div {
+        padding: 0 !important;
+    }
 }
