@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Aero Drone Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display:flex; align-items:center; gap:0.5rem;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--accent)" />
+                            <stop offset="100%" stop-color="#0ea5e9" />
+                        </linearGradient>
+                        <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--accent)" />
+                            <stop offset="100%" stop-color="#38bdf8" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="currentColor" opacity="0.3">
+                        <rect x="0" y="24" width="6" height="6" rx="1"/>
+                        <rect x="8" y="24" width="6" height="6" rx="1"/>
+                        <rect x="0" y="16" width="6" height="6" rx="1"/>
+                        <rect x="0" y="8" width="6" height="6" rx="1"/>
+                    </g>
+                    <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+                    <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.8"/>
+                </svg>
+                Aero
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 (Cinematic)</a></li>
+                        <li><a href="home2.html">Home 2 (Industrial)</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="dashboard.html">Dashboard <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dashboard.html">User</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header-utils">
+                <a href="signin.html" style="font-weight: 500; font-size: 0.95rem; color: var(--accent);">Sign In</a>
+                <a href="signup.html" class="btn" style="padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.9rem;">Sign Up</a>
+                <div style="width: 1px; height: 24px; background-color: var(--border); margin: 0 0.5rem;"></div>
+                <button id="dir-toggle" class="btn-toggle">LTR</button>
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: 4rem 1rem;">
+        <!-- Background element for auth pages -->
+        <div style="position: absolute; top: -10%; left: -10%; width: 50vw; height: 50vw; background: var(--accent-glow); border-radius: 50%; filter: blur(100px); z-index: -1;"></div>
+        <div style="position: absolute; bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: rgba(56, 189, 248, 0.1); border-radius: 50%; filter: blur(80px); z-index: -1;"></div>
+
+        <div class="card" style="width: 100%; max-width: 450px; padding: 3rem 2.5rem;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome Back</h2>
+                <p style="color: var(--text-secondary);">Enter your credentials to access your dashboard.</p>
+            </div>
+
+            <form>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-secondary);">Email Address</label>
+                    <input type="email" class="form-control" placeholder="client@company.com" required>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <label style="font-weight: 500; color: var(--text-secondary);">Password</label>
+                        <a href="#" style="font-size: 0.85rem; color: var(--accent);">Forgot Password?</a>
+                    </div>
+                    <input type="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                
+                <div style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="remember" style="accent-color: var(--accent);">
+                    <label for="remember" style="font-size: 0.9rem; color: var(--text-secondary); cursor: pointer;">Remember me for 30 days</label>
+                </div>
+
+                <a href="dashboard.html" class="btn" style="width: 100%; margin-bottom: 1.5rem; text-align: center;">Sign In</a>
+
+                <p style="text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+                    Don't have an account? <a href="signup.html" style="color: var(--accent); font-weight: 600;">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer style="padding: 2rem 5%; border-top: 1px solid var(--border); background-color: transparent;">
+        <p>&copy; 2026 Aero Drone Services. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

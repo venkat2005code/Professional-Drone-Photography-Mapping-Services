@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Aero Drone Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="app-mode">
+    <div class="app-container">
+        <!-- FIXED SIDEBAR -->
+        <aside class="app-sidebar">
+            <div class="app-sidebar-header">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; text-decoration: none;">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#0ea5e9" />
+                                </linearGradient>
+                                <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="currentColor" opacity="0.3">
+                                <rect x="0" y="24" width="6" height="6" rx="1"/>
+                                <rect x="8" y="24" width="6" height="6" rx="1"/>
+                                <rect x="0" y="16" width="6" height="6" rx="1"/>
+                                <rect x="0" y="8" width="6" height="6" rx="1"/>
+                            </g>
+                            <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+                            <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.8"/>
+                        </svg>
+                        <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Aero</span>
+                    </a>
+                </div>
+                
+                <!-- Profile Card -->
+                <div class="user-profile-card">
+                    <div class="user-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">SA</div>
+                    <div class="user-info">
+                        <h4 style="color: var(--text-primary);">System Admin</h4>
+                        <p>Aero Drone Services HQ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <ul class="app-sidebar-nav">
+                <li><a href="#admin-overview" class="active"><i class="fas fa-chart-pie"></i> Overview</a></li>
+                <li><a href="#clients"><i class="fas fa-users"></i> Client Mgmt</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Project Mgmt</a></li>
+                <li><a href="#flights"><i class="fas fa-plane-departure"></i> Flight Ops</a></li>
+                <li><a href="#fleet"><i class="fas fa-drone"></i> Drone Fleet</a></li>
+                <li><a href="#media"><i class="fas fa-photo-video"></i> Media Mgmt</a></li>
+                <li><a href="#mapping"><i class="fas fa-layer-group"></i> Mapping Data</a></li>
+                <li><a href="#pilots"><i class="fas fa-id-badge"></i> Pilot Mgmt</a></li>
+                <li><a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#settings"><i class="fas fa-sliders-h"></i> System Settings</a></li>
+            </ul>
+
+            <!-- Footer -->
+            <div class="app-sidebar-footer">
+                <a href="signin.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- MAIN SCROLLABLE CONTENT -->
+        <main class="app-main">
+            <!-- Topbar -->
+            <div class="app-topbar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" style="margin-right: auto;"><i class="fas fa-bars"></i></button>
+                <button id="dir-toggle" class="btn-toggle">LTR</button>
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- SECTION 1: Overview -->
+            <section id="admin-overview" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Admin Overview</h2>
+                    <p>High-level statistics on global drone operations and platform health.</p>
+                </div>
+                
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-users" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Total Clients</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">42</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-satellite-dish" style="font-size: 2rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Active Projects</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">18</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-plane" style="font-size: 2rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Scheduled Flights</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">7</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hdd" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Platform Storage</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">12.4 TB</div>
+                    </div>
+                </div>
+
+                <!-- Chart Placeholders -->
+                <div class="grid-2">
+                    <div class="media-placeholder ratio-16-9" style="border-radius: 16px;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=6" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-chart-area"></i>
+                        <span>[Chart Placeholder: Monthly Revenue Growth]</span>
+                    </div>
+                    <div class="media-placeholder ratio-16-9" style="border-radius: 16px;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=7" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-chart-bar"></i>
+                        <span>[Chart Placeholder: Flight Hours by Drone Model]</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Client Management -->
+            <section id="clients" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Client Management</h2>
+                    <p>Database of enterprise mapping and cinematic clients.</p>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Client / Company</th>
+                            <th>Primary Contact</th>
+                            <th>Active Contracts</th>
+                            <th>Total Spent</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Apex Real Estate</strong></td>
+                            <td>John Doe <br><span style="font-size:0.8rem; color:var(--text-secondary);">john@apex.com</span></td>
+                            <td>2</td>
+                            <td>$45,200</td>
+                            <td><button class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Skyline Construction Corp</strong></td>
+                            <td>Mike T. <br><span style="font-size:0.8rem; color:var(--text-secondary);">mike@skyline.com</span></td>
+                            <td>5</td>
+                            <td>$112,000</td>
+                            <td><button class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Valley Farms Agriculture</strong></td>
+                            <td>Sarah J. <br><span style="font-size:0.8rem; color:var(--text-secondary);">sarah@vfarms.com</span></td>
+                            <td>1</td>
+                            <td>$8,400</td>
+                            <td><button class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 3: Project Management -->
+            <section id="projects" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Project Management</h2>
+                    <p>Global view of all active deliverables and processing queues.</p>
+                </div>
+                
+                <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3 style="margin: 0;">Processing Queue (Node #01)</h3>
+                        <span class="badge badge-active">Cluster Online</span>
+                    </div>
+                    <div class="progress-container"><div class="progress-bar" style="width: 78%;"></div></div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Rendering Orthomosaic for PRJ-2026-038 (Est. 2h 15m remaining)</p>
+                </div>
+
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Client</th>
+                            <th>Type</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#PRJ-2026-042</strong></td>
+                            <td>Apex Real Estate</td>
+                            <td>LiDAR</td>
+                            <td>Jun 25, 2026</td>
+                            <td><span class="badge badge-active">Flight Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>#PRJ-2026-038</strong></td>
+                            <td>Skyline Construction</td>
+                            <td>Orthomosaic</td>
+                            <td>Jun 20, 2026</td>
+                            <td><span class="badge badge-processing">Pix4D Render</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 4: Flight Operations -->
+            <section id="flights" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Flight Operations</h2>
+                    <p>Mission planning, weather tracking, and active airspace monitoring.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=8" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-map-marked"></i>
+                        <span>[Map Placeholder: Live Airspace & LAANC Data]</span>
+                    </div>
+                    <div>
+                        <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1rem;">
+                            <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-cloud-sun"></i> Weather Alert - Zone Alpha</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Wind speeds exceeding 25mph. High risk for DJI Inspire 3 operations today.</p>
+                        </div>
+                        <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border);">
+                            <h4 style="margin-bottom: 0.5rem;">Active Missions</h4>
+                            <ul style="list-style:none; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-plane" style="color:#10b981; width:20px;"></i> <strong>DJI M350 RTK</strong> - In flight (Alt: 400ft)</li>
+                                <li><i class="fas fa-plane" style="color:var(--accent); width:20px;"></i> <strong>DJI Mavic 3E</strong> - Pre-flight checklist</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: Drone Fleet -->
+            <section id="fleet" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Drone Fleet</h2>
+                    <p>Hardware inventory, battery cycles, and maintenance logs.</p>
+                </div>
+                <div class="grid-3">
+                    <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                        <div class="media-placeholder ratio-square" style="margin-bottom: 1rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=9" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                            <i class="fas fa-drone"></i>
+                            <span>[Image: DJI Inspire 3]</span>
+                        </div>
+                        <h4>DJI Inspire 3 (Cinematic)</h4>
+                        <p style="font-size: 0.85rem; color: #10b981; margin-top: 0.5rem;">Status: Airworthy</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Next Maintenance: 45 flight hrs</p>
+                    </div>
+                    <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                        <div class="media-placeholder ratio-square" style="margin-bottom: 1rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=10" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                            <i class="fas fa-drone"></i>
+                            <span>[Image: DJI M350 RTK]</span>
+                        </div>
+                        <h4>DJI Matrice 350 RTK</h4>
+                        <p style="font-size: 0.85rem; color: #10b981; margin-top: 0.5rem;">Status: In Mission</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Next Maintenance: 12 flight hrs</p>
+                    </div>
+                    <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+                        <div class="media-placeholder ratio-square" style="margin-bottom: 1rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=11" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                            <i class="fas fa-drone"></i>
+                            <span>[Image: DJI Mavic 3E]</span>
+                        </div>
+                        <h4>DJI Mavic 3 Enterprise</h4>
+                        <p style="font-size: 0.85rem; color: #f59e0b; margin-top: 0.5rem;">Status: Maintenance Due</p>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Propeller replacement required</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: Media Management -->
+            <section id="media" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Media Management</h2>
+                    <p>Centralized raw photo and video asset organization.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="media-placeholder ratio-4-3">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=12" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-folder"></i>
+                        <span>[Directory: PRJ-2026-038 RAW Video]</span>
+                    </div>
+                    <div class="media-placeholder ratio-4-3">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=13" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-folder"></i>
+                        <span>[Directory: PRJ-2026-042 JPEGs]</span>
+                    </div>
+                    <div class="media-placeholder ratio-4-3">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=14" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-folder"></i>
+                        <span>[Directory: Color Graded Masters]</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: Mapping Deliverables -->
+            <section id="mapping" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Mapping Deliverables</h2>
+                    <p>Processed spatial data management (DSM, DEM, Point Clouds).</p>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Data Set</th>
+                            <th>Format</th>
+                            <th>Size</th>
+                            <th>Processing Software</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Valley Farms DSM</strong></td>
+                            <td>GeoTIFF</td>
+                            <td>4.2 GB</td>
+                            <td>Pix4D Mapper</td>
+                            <td><span class="badge badge-delivered">Ready</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Downtown Tower Point Cloud</strong></td>
+                            <td>.LAS</td>
+                            <td>12.8 GB</td>
+                            <td>DJI Terra</td>
+                            <td><span class="badge badge-active">Verifying</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 8: Pilot Management -->
+            <section id="pilots" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Pilot Management</h2>
+                    <p>UAS operator profiles, Part 107 certifications, and flight logs.</p>
+                </div>
+                <div class="grid-2">
+                    <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 1.5rem;">
+                        <div class="user-avatar" style="width: 64px; height: 64px; font-size: 1.5rem;">SM</div>
+                        <div>
+                            <h4>Sarah Miller</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Lead Cinematic Pilot</p>
+                            <span class="badge badge-active">Part 107 Valid (2028)</span>
+                        </div>
+                    </div>
+                    <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 1.5rem;">
+                        <div class="user-avatar" style="width: 64px; height: 64px; font-size: 1.5rem; background: var(--text-secondary);">DC</div>
+                        <div>
+                            <h4>David Chen</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Surveying & Mapping Specialist</p>
+                            <span class="badge badge-active">Part 107 Valid (2027)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: Reports & Analytics -->
+            <section id="analytics" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Reports & Analytics</h2>
+                    <p>Business intelligence for drone operations.</p>
+                </div>
+                <div class="grid-2" style="margin-bottom: 2rem;">
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=15" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-chart-line"></i>
+                        <span>[Chart Placeholder: Revenue by Service Type]</span>
+                    </div>
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=16" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-chart-pie"></i>
+                        <span>[Chart Placeholder: Client Industry Breakdown]</span>
+                    </div>
+                </div>
+                <div class="media-placeholder ratio-16-9" style="max-height: 300px;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=17" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                    <i class="fas fa-chart-bar"></i>
+                    <span>[Chart Placeholder: Asset Download Frequency]</span>
+                </div>
+            </section>
+
+            <!-- SECTION 10: Notifications -->
+            <section id="notifications" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Notifications</h2>
+                    <p>Internal system alerts and client announcements.</p>
+                </div>
+                <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                    <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+                        <h4 style="color: #ef4444; margin-bottom: 0.5rem;"><i class="fas fa-exclamation-triangle"></i> Firmware Update Required</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">DJI Matrice 350 RTK requires firmware v1.02.04. Ground all flights until patched.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> New Client Onboarded</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Skyline Construction Corp has signed a 6-month mapping retainer.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 11: System Settings -->
+            <section id="settings" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>System Settings</h2>
+                    <p>Platform configuration, user roles, and security.</p>
+                </div>
+                <div class="grid-2">
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1.5rem;">User Roles & Permissions</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Manage access for pilots, data processors, and admins.</p>
+                        <button class="btn btn-outline" style="width: 100%;">Manage Roles</button>
+                    </div>
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1.5rem;">Storage Bucket Config</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">AWS S3 integration settings for client media delivery.</p>
+                        <button class="btn btn-outline" style="width: 100%;">Configure Storage</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

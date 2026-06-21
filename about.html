@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Aero Drone Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; text-decoration: none;">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--accent)" />
+                            <stop offset="100%" stop-color="#0ea5e9" />
+                        </linearGradient>
+                        <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--accent)" />
+                            <stop offset="100%" stop-color="#38bdf8" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="currentColor" opacity="0.3">
+                        <rect x="0" y="24" width="6" height="6" rx="1"/>
+                        <rect x="8" y="24" width="6" height="6" rx="1"/>
+                        <rect x="0" y="16" width="6" height="6" rx="1"/>
+                        <rect x="0" y="8" width="6" height="6" rx="1"/>
+                    </g>
+                    <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+                    <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.8"/>
+                </svg>
+                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Aero</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item-dropdown">
+                    <a href="index.html">Home <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 (Cinematic)</a></li>
+                        <li><a href="home2.html">Home 2 (Industrial)</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="dashboard.html">Dashboard <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dashboard.html">User</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header-utils">
+                <a href="signin.html" style="font-weight: 500; font-size: 0.95rem; color: var(--text-primary);">Sign In</a>
+                <a href="signup.html" class="btn" style="padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.9rem; background: var(--accent); color: #fff;">Sign Up</a>
+                <div style="width: 1px; height: 24px; background-color: var(--border); margin: 0 0.5rem;"></div>
+                <button id="dir-toggle" class="btn-toggle">LTR</button>
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: Mission Hero -->
+        <section class="hero-centered" style="background-color: var(--bg-primary); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 0;" class="media-placeholder">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=18" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                <span>[Hero Background Image: Drones over Cityscape]</span>
+            </div>
+            <div style="position: relative; z-index: 1; max-width: 800px;">
+                <h1 style="font-size: 4rem; margin-bottom: 1rem;">Redefining the Sky</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Aero was founded on a simple principle: To deliver the most accurate aerial data and breathtaking cinematic footage to industries that build our world.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Heritage Timeline -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="grid-2" style="max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Heritage</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">From a small cinematic team to a national leader in industrial UAV mapping.</p>
+                </div>
+                <div class="history-timeline">
+                    <div class="history-item">
+                        <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem;">2018: Inception</h4>
+                        <p style="color: var(--text-secondary);">Founded as a boutique real estate aerial photography firm operating out of a small studio.</p>
+                    </div>
+                    <div class="history-item">
+                        <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem;">2021: Industrial Expansion</h4>
+                        <p style="color: var(--text-secondary);">Acquired our first enterprise-grade RTK drones and transitioned into infrastructure mapping and 3D modeling.</p>
+                    </div>
+                    <div class="history-item">
+                        <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem;">2024: SaaS Dashboard Launch</h4>
+                        <p style="color: var(--text-secondary);">Developed our proprietary client delivery portal, allowing enterprise clients to interact with point clouds securely.</p>
+                    </div>
+                    <div class="history-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 0.5rem;">2026: National Fleet</h4>
+                        <p style="color: var(--text-secondary);">Operating a fleet of 50+ specialized UAVs across 12 regional offices with licensed Part 107 pilots.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Leadership Team -->
+        <section class="section-padding" style="background-color: var(--bg-primary);">
+            <div class="section-title">
+                <h2>The Leadership Team</h2>
+                <p>Aviation veterans and GIS experts.</p>
+            </div>
+            <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 2rem; max-width: 1200px; margin: 0 auto; scroll-snap-type: x mandatory;">
+                <div style="flex: 0 0 300px; scroll-snap-align: start;">
+                    <div class="media-placeholder ratio-square" style="border-radius: 16px; margin-bottom: 1.5rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="Marcus Vance CEO">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-user-tie"></i>
+                        <span>[Team Photo: CEO]</span>
+                    </div>
+                    <h3>Marcus Vance</h3>
+                    <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">Founder & CEO</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Former commercial airline pilot turned UAV entrepreneur.</p>
+                </div>
+                <div style="flex: 0 0 300px; scroll-snap-align: start;">
+                    <div class="media-placeholder ratio-square" style="border-radius: 16px; margin-bottom: 1.5rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Sarah Miller Chief Pilot">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-user-astronaut"></i>
+                        <span>[Team Photo: Chief Pilot]</span>
+                    </div>
+                    <h3>Sarah Miller</h3>
+                    <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">Chief Pilot Operations</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Manages the national fleet and pilot certification program.</p>
+                </div>
+                <div style="flex: 0 0 300px; scroll-snap-align: start;">
+                    <div class="media-placeholder ratio-square" style="border-radius: 16px; margin-bottom: 1.5rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop" alt="Dr. Elena Rostova GIS">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-laptop-code"></i>
+                        <span>[Team Photo: Lead GIS]</span>
+                    </div>
+                    <h3>Dr. Elena Rostova</h3>
+                    <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">Head of GIS Engineering</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Ph.D in Geomatics, leading all LiDAR and point cloud processing.</p>
+                </div>
+                <div style="flex: 0 0 300px; scroll-snap-align: start;">
+                    <div class="media-placeholder ratio-square" style="border-radius: 16px; margin-bottom: 1.5rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="James Chen Safety">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-user-shield"></i>
+                        <span>[Team Photo: Safety Dir]</span>
+                    </div>
+                    <h3>James Chen</h3>
+                    <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">Director of Safety</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Ensures 100% OSHA and FAA compliance on all deployments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Safety & Compliance -->
+        <section class="section-padding" style="background-color: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">Safety & Compliance Standards</h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 3rem;">
+                    <div style="text-align: center; width: 150px;">
+                        <i class="fas fa-id-card" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 600; font-size: 0.9rem;">FAA Part 107<br>Certified Pilots</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 600; font-size: 0.9rem;">$5M Aviation<br>Liability Insured</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <i class="fas fa-hard-hat" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 600; font-size: 0.9rem;">OSHA 30<br>Certified Team</p>
+                    </div>
+                    <div style="text-align: center; width: 150px;">
+                        <i class="fas fa-certificate" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 600; font-size: 0.9rem;">ISO 9001:2015<br>Compliant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Global Reach Map -->
+        <section class="section-padding" style="background-color: var(--bg-primary);">
+            <div class="section-title">
+                <h2>National Operations Coverage</h2>
+                <p>Deploying rapidly from 12 strategic hubs.</p>
+            </div>
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="width: 100%; height: 60vh; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-elevated);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13540875.050456181!2d-98.35824580556113!3d39.7392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Careers CTA -->
+        <section class="section-padding" style="background: var(--bg-secondary); text-align: center;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Join the Fleet</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">We are always looking for skilled Part 107 pilots and GIS engineers to join our growing team.</p>
+                <a href="contact.html" class="btn" style="padding: 1rem 3rem;">View Open Positions</a>
+            </div>
+        </section>
+    </main>
+
+        <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; text-decoration: none;">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#0ea5e9" />
+                                </linearGradient>
+                                <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="currentColor" opacity="0.3">
+                                <rect x="0" y="24" width="6" height="6" rx="1"/>
+                                <rect x="8" y="24" width="6" height="6" rx="1"/>
+                                <rect x="0" y="16" width="6" height="6" rx="1"/>
+                                <rect x="0" y="8" width="6" height="6" rx="1"/>
+                            </g>
+                            <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+                            <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.8"/>
+                        </svg>
+                        <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Aero</span>
+                    </a>
+                </div>
+                <p>Elevating industries through precision aerial data, 3D mapping, and cinematic videography.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Orthomosaic Mapping</a></li>
+                    <li><a href="services.html">3D Digital Twins</a></li>
+                    <li><a href="services.html">Cinematic 4K Video</a></li>
+                    <li><a href="services.html">Thermal Inspections</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 7800 Aerospace Blvd, Denver, CO 80239</p>
+                <p><i class="fas fa-phone-alt"></i> +1 (800) 555-AERO</p>
+                <p><i class="fas fa-envelope"></i> contact@aero-drones.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aero Drone Services. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0ea5e9" />
+            <stop offset="100%" stop-color="#0ea5e9" />
+        </linearGradient>
+        <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0ea5e9" />
+            <stop offset="100%" stop-color="#38bdf8" />
+        </linearGradient>
+    </defs>
+    <g fill="#94a3b8" opacity="0.8">
+        <rect x="0" y="24" width="6" height="6" rx="1"/>
+        <rect x="8" y="24" width="6" height="6" rx="1"/>
+        <rect x="0" y="16" width="6" height="6" rx="1"/>
+        <rect x="0" y="8" width="6" height="6" rx="1"/>
+    </g>
+    <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+    <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.9"/>
+</svg>

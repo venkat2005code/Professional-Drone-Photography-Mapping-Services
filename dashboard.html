@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - Aero Drone Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="app-mode">
+    <div class="app-container">
+        <!-- FIXED SIDEBAR -->
+        <aside class="app-sidebar">
+            <div class="app-sidebar-header">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; text-decoration: none;">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="drone-grad-right" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#0ea5e9" />
+                                </linearGradient>
+                                <linearGradient id="drone-grad-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent)" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="currentColor" opacity="0.3">
+                                <rect x="0" y="24" width="6" height="6" rx="1"/>
+                                <rect x="8" y="24" width="6" height="6" rx="1"/>
+                                <rect x="0" y="16" width="6" height="6" rx="1"/>
+                                <rect x="0" y="8" width="6" height="6" rx="1"/>
+                            </g>
+                            <path d="M 12 20 L 32 0 L 20 28 Z" fill="url(#drone-grad-right)"/>
+                            <path d="M 12 20 L 32 0 L 4 12 Z" fill="url(#drone-grad-left)" opacity="0.8"/>
+                        </svg>
+                        <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Aero</span>
+                    </a>
+                </div>
+                
+                <!-- Profile Card -->
+                <div class="user-profile-card">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                        <h4 style="color: var(--text-primary);">John Doe</h4>
+                        <p>Apex Real Estate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <ul class="app-sidebar-nav">
+                <li><a href="#overview" class="active"><i class="fas fa-border-all"></i> Overview</a></li>
+                <li><a href="#projects"><i class="fas fa-folder-open"></i> My Projects</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Project Gallery</a></li>
+                <li><a href="#maps"><i class="fas fa-map"></i> Orthomosaic Maps</a></li>
+                <li><a href="#videos"><i class="fas fa-video"></i> 4K Video Assets</a></li>
+                <li><a href="#terrain"><i class="fas fa-mountain"></i> 3D Terrain</a></li>
+                <li><a href="#downloads"><i class="fas fa-cloud-download-alt"></i> Download Center</a></li>
+                <li><a href="#progress"><i class="fas fa-tasks"></i> Project Progress</a></li>
+                <li><a href="#invoices"><i class="fas fa-file-invoice-dollar"></i> Invoices</a></li>
+                <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Profile Settings</a></li>
+            </ul>
+
+            <!-- Footer -->
+            <div class="app-sidebar-footer">
+                <a href="signin.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- MAIN SCROLLABLE CONTENT -->
+        <main class="app-main">
+            <!-- Topbar for responsive toggle & theme utilities -->
+            <div class="app-topbar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" style="margin-right: auto;"><i class="fas fa-bars"></i></button>
+                <button id="dir-toggle" class="btn-toggle">LTR</button>
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- SECTION 1: Overview -->
+            <section id="overview" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Dashboard Overview</h2>
+                    <p>Welcome back, John. Here's a summary of your active mapping projects.</p>
+                </div>
+                
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-satellite-dish" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Active Projects</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">2</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle" style="font-size: 2rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Completed Projects</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">8</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hdd" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Storage Usage</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">145 GB</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-cloud-download-alt" style="font-size: 2rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Total Downloads</h4>
+                        <div style="font-size: 2.5rem; font-weight: 700; font-family: var(--font-heading);">24</div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1rem;">Recent Deliveries</h3>
+                        <ul style="list-style: none;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between;">
+                                <div>
+                                    <strong>Downtown Tower - 3D Model</strong>
+                                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Delivered on Jun 15, 2026</p>
+                                </div>
+                                <span class="badge badge-delivered">Delivered</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; justify-content: space-between;">
+                                <div>
+                                    <strong>Valley Estate - Orthomosaic</strong>
+                                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Delivered on May 28, 2026</p>
+                                </div>
+                                <span class="badge badge-delivered">Delivered</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1rem;">Upcoming Missions</h3>
+                        <ul style="list-style: none;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem;">
+                                <div style="background: rgba(14,165,233,0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items:center; justify-content: center; color: var(--accent); font-weight: bold;">
+                                    22<br>Jun
+                                </div>
+                                <div>
+                                    <strong>Highland Park Survey</strong>
+                                    <p style="font-size: 0.85rem; color: var(--text-secondary);">DJI Matrice 350 RTK | Pilot: S. Miller</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: My Projects -->
+            <section id="projects" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>My Projects</h2>
+                    <p>Track the status of your ongoing and past aerial mapping requests.</p>
+                </div>
+                
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Project ID / Name</th>
+                            <th>Service Type</th>
+                            <th>Pilot</th>
+                            <th>Target Delivery</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>#PRJ-2026-042</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Highland Park Topography</span>
+                            </td>
+                            <td>LiDAR Mapping</td>
+                            <td>Sarah Miller</td>
+                            <td>Jun 25, 2026</td>
+                            <td><span class="badge badge-active">Flight Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>#PRJ-2026-038</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Riverside Construction Dev</span>
+                            </td>
+                            <td>Orthomosaic + 4K Video</td>
+                            <td>David Chen</td>
+                            <td>Jun 20, 2026</td>
+                            <td><span class="badge badge-processing">Data Processing</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>#PRJ-2026-015</strong><br>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Downtown Tower Facade</span>
+                            </td>
+                            <td>3D Digital Twin</td>
+                            <td>Sarah Miller</td>
+                            <td>Jun 15, 2026</td>
+                            <td><span class="badge badge-delivered">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 3: Project Gallery -->
+            <section id="gallery" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Project Gallery</h2>
+                    <p>Visual previews of your recent aerial photography.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=26" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-image"></i>
+                        <span>[Image Placeholder: Riverside Aerial Overview]</span>
+                    </div>
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=27" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-image"></i>
+                        <span>[Image Placeholder: Downtown Tower Facade]</span>
+                    </div>
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=28" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-image"></i>
+                        <span>[Image Placeholder: Valley Estate Panorama]</span>
+                    </div>
+                    <div class="media-placeholder ratio-16-9">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=29" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                        <i class="fas fa-image"></i>
+                        <span>[Image Placeholder: Highland Park Raw Feed]</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: Orthomosaic Maps -->
+            <section id="maps" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Orthomosaic Maps</h2>
+                    <p>High-resolution, geometrically corrected aerial maps ready for GIS import.</p>
+                </div>
+                <div style="position: relative; width: 100%; height: 400px; margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-elevated);">
+                    <iframe src="https://maps.google.com/maps?q=39.7555,-105.0000&t=k&z=18&output=embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="grid-2">
+                    <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px;">
+                        <h4 style="margin-bottom: 0.5rem;">Downtown Tower Area</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Resolution: 2cm/pixel | Size: 1.4 GB</p>
+                        <button class="btn btn-outline" style="width: 100%;"><i class="fas fa-download"></i> Download GeoTIFF</button>
+                    </div>
+                    <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px;">
+                        <h4 style="margin-bottom: 0.5rem;">Valley Estate</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Resolution: 1.5cm/pixel | Size: 2.1 GB</p>
+                        <button class="btn btn-outline" style="width: 100%;"><i class="fas fa-download"></i> Download GeoTIFF</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: 4K Video Assets -->
+            <section id="videos" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>4K Video Assets</h2>
+                    <p>Raw and color-graded aerial cinematography.</p>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <div class="media-placeholder ratio-16-9" style="margin-bottom: 1rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=30" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                            <i class="fas fa-play-circle"></i>
+                            <span>[Video Placeholder: Riverside Fly-through]</span>
+                        </div>
+                        <h4>Riverside Fly-through (RAW)</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">4K 60fps | ProRes 422 | 8.4 GB</p>
+                        <button class="btn btn-outline"><i class="fas fa-download"></i> Download Assets</button>
+                    </div>
+                    <div>
+                        <div class="media-placeholder ratio-16-9" style="margin-bottom: 1rem;">
+    <!-- Paste your URL below. Empty src attributes are automatically hidden. -->
+    <img src="https://loremflickr.com/800/600/drone,architecture?lock=31" alt="Placeholder Media">
+    <video src="" autoplay loop muted playsinline></video>
+
+                            <i class="fas fa-play-circle"></i>
+                            <span>[Video Placeholder: Downtown Cinematic]</span>
+                        </div>
+                        <h4>Downtown Tower Cinematic</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">4K 24fps | Color Graded | 2.1 GB</p>
+                        <button class="btn btn-outline"><i class="fas fa-download"></i> Download Assets</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: 3D Terrain Models -->
+            <section id="terrain" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>3D Terrain Models</h2>
+                    <p>Digital Elevation Models (DEM) and Point Clouds.</p>
+                </div>
+                <div style="width: 100%; height: 500px; margin-bottom: 2rem; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-elevated);">
+                    <iframe title="3D Terrain Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d42c9216bcfb4ab18350e437259fb558/embed?autostart=0&ui_theme=dark" style="width: 100%; height: 100%;"> </iframe>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Model Asset</th>
+                            <th>Format</th>
+                            <th>Points/Detail</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Downtown Tower Digital Twin</strong></td>
+                            <td>.OBJ / .MTL</td>
+                            <td>High Density (14M pts)</td>
+                            <td><button class="btn" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Download</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Valley Estate DSM</strong></td>
+                            <td>.LAS</td>
+                            <td>Standard (4M pts)</td>
+                            <td><button class="btn" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Download</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 7: Download Center -->
+            <section id="downloads" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Download Center</h2>
+                    <p>Bulk access to all your compressed project deliverables.</p>
+                </div>
+                <div class="grid-3" style="margin-bottom: 2rem;">
+                    <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-file-archive" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4>Project #042 Complete Package</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">All Maps, Videos, Data (12.4 GB)</p>
+                        <button class="btn btn-outline" style="width: 100%;">Download .ZIP</button>
+                    </div>
+                    <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-file-archive" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4>Project #038 Complete Package</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">All Maps, Videos, Data (8.1 GB)</p>
+                        <button class="btn btn-outline" style="width: 100%;">Download .ZIP</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 8: Project Progress -->
+            <section id="progress" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Project Progress</h2>
+                    <p>Live tracking of your active mapping requests.</p>
+                </div>
+                
+                <div style="background: var(--bg-elevated); padding: 3rem; border-radius: 16px; border: 1px solid var(--border);">
+                    <h3>Riverside Construction Dev (#PRJ-2026-038)</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Current Stage: Photogrammetry Processing</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Flight Scheduled</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">June 18, 2026 - Pilot: David Chen</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Flight Completed</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">June 19, 2026 - 4,200 photos captured</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 >Data Processing</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Currently rendering Orthomosaic in Pix4D. Expected duration: 12 hours.</p>
+                            <div class="progress-container"><div class="progress-bar" style="width: 65%;"></div></div>
+                        </div>
+                        <div class="timeline-item" style="opacity: 0.5;">
+                            <h4>Quality Review</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Pending QA check by engineering team.</p>
+                        </div>
+                        <div class="timeline-item" style="opacity: 0.5;">
+                            <h4>Ready for Download</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Assets pushed to your secure storage bucket.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 9: Invoices & Payments -->
+            <section id="invoices" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Invoices & Payments</h2>
+                    <p>Manage your billing and download PDF invoices.</p>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Invoice No.</th>
+                            <th>Date</th>
+                            <th>Project</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV-2026-1042</td>
+                            <td>Jun 01, 2026</td>
+                            <td>Downtown Tower Facade</td>
+                            <td>$4,500.00</td>
+                            <td><span class="badge badge-delivered">Paid</span></td>
+                            <td><button class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;"><i class="fas fa-download"></i> PDF</button></td>
+                        </tr>
+                        <tr>
+                            <td>INV-2026-1088</td>
+                            <td>Jun 15, 2026</td>
+                            <td>Riverside Construction Dev</td>
+                            <td>$2,800.00</td>
+                            <td><span class="badge badge-processing">Pending</span></td>
+                            <td><button class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Pay Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 10: Notifications -->
+            <section id="notifications" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Notifications</h2>
+                    <p>Alerts and updates regarding your operations.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="background: var(--bg-secondary); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="margin-bottom: 0.5rem;">Data Processing Complete</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Your 3D model for Downtown Tower is ready for download in the Terrain section.</p>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; display: block;">2 days ago</span>
+                    </div>
+                    <div style="background: var(--bg-secondary); border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="margin-bottom: 0.5rem;">Weather Delay</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Flight #PRJ-2026-042 (Highland Park) has been rescheduled to Jun 22 due to high winds.</p>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; display: block;">5 days ago</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 11: Settings -->
+            <section id="settings" class="app-section fade-up">
+                <div class="app-section-header">
+                    <h2>Profile Settings</h2>
+                    <p>Update your company details and secure access.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1.5rem;">Company Details</h3>
+                        <form>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display:block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Company Name</label>
+                                <input type="text" class="form-control" value="Apex Real Estate">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display:block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Contact Email</label>
+                                <input type="email" class="form-control" value="john.doe@apexrealestate.com">
+                            </div>
+                            <button type="button" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <div style="background: var(--bg-elevated); padding: 2rem; border-radius: 16px; border: 1px solid var(--border);">
+                        <h3 style="margin-bottom: 1.5rem;">Security</h3>
+                        <form>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display:block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">Current Password</label>
+                                <input type="password" class="form-control" placeholder="••••••••">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label style="display:block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">New Password</label>
+                                <input type="password" class="form-control" placeholder="••••••••">
+                            </div>
+                            <button type="button" class="btn btn-outline">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
